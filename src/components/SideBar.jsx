@@ -19,7 +19,7 @@ function Sidebar() {
   return (
     <div className="sidebar">
       <h2>Dashboard</h2>
-      <button onClick={() => navigate("/students")}>Students Page</button>
+      <button onClick={() => navigate("/")}>Students Page</button>
       <button onClick={handleLogout}>Logout</button>
     </div>
   );

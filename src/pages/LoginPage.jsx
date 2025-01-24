@@ -13,7 +13,7 @@ function LoginPage() {
     e.preventDefault();
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      navigate("/students");
+      navigate("/");
       localStorage.setItem("user", true);
     } catch (err) {
       console.log(err);
