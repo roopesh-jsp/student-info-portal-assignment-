@@ -10,7 +10,7 @@ import {
 } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 import { FaEye, FaEdit, FaTrashAlt } from "react-icons/fa";
-import Sidebar from "../components/sideBar";
+import Sidebar from "../components/SideBar";
 
 function StudentsPage() {
   const [students, setStudents] = useState([]);
