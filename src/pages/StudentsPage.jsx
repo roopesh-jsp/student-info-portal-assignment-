@@ -196,7 +196,7 @@ function StudentsPage() {
           )}
 
           {/* Modal for Edit Student */}
-          {editModalOpen && (
+          {editModalOpen && selectedStudent && (
             <div className="modal">
               <form onSubmit={handleEditStudent}>
                 <h3>Edit Student</h3>
@@ -209,7 +209,109 @@ function StudentsPage() {
                     required
                   />
                 </label>
-                {/* Repeat the fields here, same as Add Student */}
+                <label>
+                  Class:
+                  <input
+                    type="text"
+                    name="class"
+                    defaultValue={selectedStudent.class}
+                    required
+                  />
+                </label>
+                <label>
+                  Section:
+                  <input
+                    type="text"
+                    name="section"
+                    defaultValue={selectedStudent.section}
+                    required
+                  />
+                </label>
+                <label>
+                  Roll Number:
+                  <input
+                    type="text"
+                    name="rollNumber"
+                    defaultValue={selectedStudent.rollNumber}
+                    required
+                  />
+                </label>
+                {/* Add more fields as necessary */}
+                <label>
+                  Email:
+                  <input
+                    type="email"
+                    name="email"
+                    defaultValue={selectedStudent.email}
+                    required
+                  />
+                </label>
+                <label>
+                  Phone Number:
+                  <input
+                    type="tel"
+                    name="phone"
+                    defaultValue={selectedStudent.phone}
+                    required
+                  />
+                </label>
+                <label>
+                  Address:
+                  <input
+                    type="text"
+                    name="address"
+                    defaultValue={selectedStudent.address}
+                    required
+                  />
+                </label>
+                <label>
+                  Date of Birth:
+                  <input
+                    type="date"
+                    name="dob"
+                    defaultValue={selectedStudent.dob}
+                    required
+                  />
+                </label>
+                <label>
+                  Parent Name:
+                  <input
+                    type="text"
+                    name="parentName"
+                    defaultValue={selectedStudent.parentName}
+                    required
+                  />
+                </label>
+                <label>
+                  Parent Contact:
+                  <input
+                    type="tel"
+                    name="parentContact"
+                    defaultValue={selectedStudent.parentContact}
+                    required
+                  />
+                </label>
+                <label>
+                  Gender:
+                  <select
+                    name="gender"
+                    defaultValue={selectedStudent.gender}
+                    required
+                  >
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </label>
+                <label>
+                  Grade:
+                  <input
+                    type="text"
+                    name="grade"
+                    defaultValue={selectedStudent.grade}
+                    required
+                  />
+                </label>
                 <button type="submit">Update</button>
                 <button type="button" onClick={() => setEditModalOpen(false)}>
                   Close
@@ -219,7 +321,7 @@ function StudentsPage() {
           )}
 
           {/* Modal for View Student */}
-          {viewModalOpen && (
+          {viewModalOpen && selectedStudent && (
             <div className="view-modal">
               <div>
                 <h3>Student Details</h3>
